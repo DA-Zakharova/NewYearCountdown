@@ -28,7 +28,6 @@ function newYearCountdown() {
         clearInterval(timerID);
         happyNY();
     }
-
 }
 
 let timerID = setInterval(newYearCountdown, 1000);
