@@ -53,10 +53,12 @@ btn.addEventListener("click", () => {
 });
 
 
+const isMobile = window.innerWidth < 768;
+
 particlesJS("snow", {
     particles: {
         number: {
-        value: 170,
+        value: isMobile ? 50 : 180,
         density: {
             enable: true,
             value_area: 800
@@ -80,7 +82,7 @@ particlesJS("snow", {
         },
         move: {
         enable: true,
-        speed: 3.5,
+        speed: isMobile ? 2.0 : 3.5,
         direction: "bottom",
         straight: false,
         out_mode: "out"
@@ -96,5 +98,5 @@ particlesJS("snow", {
         onclick: { enable: false }
         }
     },
-    retina_detect: true
+    retina_detect: false
 });
