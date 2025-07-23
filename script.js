@@ -50,4 +50,51 @@ btn.addEventListener("click", () => {
         audio.pause();
         icon.src = "play.png";
     }
-})
+});
+
+
+particlesJS("snow", {
+    particles: {
+        number: {
+        value: 170,
+        density: {
+            enable: true,
+            value_area: 800
+        }
+        },
+        shape: {
+        type: "image",
+        image: {
+            src: "snow.png",
+            width: 30,
+            height: 30
+        }
+        },
+        opacity: {
+        value: 0.9,
+        random: true
+        },
+        size: {
+        value: 8,
+        random: true
+        },
+        move: {
+        enable: true,
+        speed: 3.5,
+        direction: "bottom",
+        straight: false,
+        out_mode: "out"
+        },
+        line_linked: {
+        enable: false
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+        onhover: { enable: false },
+        onclick: { enable: false }
+        }
+    },
+    retina_detect: true
+});
